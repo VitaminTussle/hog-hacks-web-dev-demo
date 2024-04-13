@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>hello world!</title>
+		<script>
+			const buttonClick = () => {
+				const hiContainer = document.getElementById('hi-container');
+				const hiElement = document.getElementById('hi');
+				if (!hiElement) {
+					const newElement = document.createElement('p');
+					newElement.innerHTML = 'hi!';
+					newElement.style = 'color:green;';
+					hiContainer.appendChild(newElement);
+				}
+			}
+			window.onload = () => {
+				document.getElementById('hi-button').onclick = buttonClick;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>hello world!</h1>
+		<button id="hi-button">say hi</button>
+		<div id="hi-container"></div>
+	</body>
+</html>
