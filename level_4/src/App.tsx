@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import HiText from './hi';
 
-const App = () => {
+function App() {
   const [isSayingHi, setIsSayingHi] = useState(false);
   return (
     <div>
-      <h1 className='text-2xl'>hello world!</h1>
+      <h1>hello world!</h1>
       <button
         className='border border-solid border-px border-black rounded-md p-2'
         onClick={() => setIsSayingHi(true)}
-      >
-        say hi!
-      </button>
-      <HiText show={isSayingHi} />
+      >say hi!</button>
+      {isSayingHi && (
+        <p className='text-green-500'>hi!</p>
+      )}
     </div>
   );
 }
